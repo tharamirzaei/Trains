@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxRandom</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 10px;
+      }
+      button {
+        margin-bottom: 10px;
+      }
+      .parent {
+        width: 100%;
+        height: 100vh;
+        border: 1px solid black;
+        float: left;
+      }
+      .parent > .child {
+        width: 30px;
+        height: 30px;
+        margin: 2px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div class="parent"></div>
+
+    <script>
+      function rnd(a, b) {
+        let random = Math.round(Math.random() * (b - a)) + a;
+        return random;
+      }
+
+      document.getElementById("start").addEventListener("click", function () {
+        let sara = setInterval(function() {
+          let rgbrnd =
+            "rgb( " +
+            rnd(0, 255) +
+            "," +
+            rnd(0, 255) +
+            " ," +
+            rnd(0, 255) +
+            " )";
+          document.querySelector(".parent").innerHTML +=
+            "<div class='child' style = 'background-color: " +
+            rgbrnd +
+            "'></div>";
+        }, 1000);
+
+        document.getElementById("stop").addEventListener("click" , function(){
+        clearInterval(sara)
+      })
+
+      });
+
+      
+      
+    </script>
+  </body>
+</html>

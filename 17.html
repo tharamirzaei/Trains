@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>android</title>
+    <link rel="stylesheet" href="css/pay.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: chartreuse;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: 1s;
+      }
+      .box > span {
+        line-height: 200px;
+        font-size: 50px;
+        transition: 1s;
+      }
+      .box:hover {
+        box-shadow: 0 0 0 10px chartreuse, 0 0 0 100px black inset;
+      }
+      .box:hover > span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span class="icon-android"></span>
+    </div>
+  </body>
+</html>

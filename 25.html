@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>train cal</title>
+  </head>
+  <body>
+    <input type="text" id="one" />
+    <input type="text" id="two" />
+    <button onclick="math('+')">+</button>
+    <button onclick="math('-')">-</button>
+    <button onclick="math('*')">*</button>
+    <button onclick="math('/')">/</button>
+    <button onclick="math('%')">%</button>
+    <span>=</span>
+    <span id="result">0</span>
+
+    <script>
+      result = 0;
+      function math(a) {
+        let x = Number(document.getElementById("one").value);
+        let y = Number(document.getElementById("two").value);
+        if(a == "+"){
+            result = x + y
+        }else if(a == "-"){
+            result = x - y
+        }else if(a == "*"){
+          result = x * y
+        }else if(a == "/"){
+          result = x / y
+        }else if(a == "%"){
+          result = x % y
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

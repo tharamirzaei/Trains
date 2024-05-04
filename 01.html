@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index-mobile</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        margin: 0px 20px;
+        background: rgba(128, 128, 128, 0.5);
+        float: left;
+        padding: 0px 10px;
+      }
+      body {
+        background: url(image/16.jpg) no-repeat center center scroll;
+        background-size: cover;
+      }
+
+      .row {
+        width: 100%;
+        height: auto;
+        float: left;
+        clear: both;
+        margin-top: 5px;
+      }
+      .header {
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        font-size: 30px;
+        font-family: arial;
+        font-variant: small-caps;
+        font-weight: bold;
+        color: #183d3d;
+      }
+      .menu {
+        width: 100%;
+        height: 40px;
+      }
+      .menu-child {
+        width: 17.5%;
+        height: 40px;
+        float: left;
+        border-left: 2px solid #183d3d;
+        background-color: #93b1a6;
+        text-align: left;
+        padding: 0px 5px;
+        line-height: 40px;
+        font-size: 11px;
+        font-family: arial;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: #040d12;
+      }
+      .menu .menu-child:first-child {
+        border-left: none;
+      }
+      .menu .menu-child:last-child {
+        width: 30%;
+        text-align: center;
+      }
+      p {
+        width: 100%;
+        height: 85px;
+        padding: 5px 5px;
+        text-align: justify;
+        font-size: 11px;
+        font-family: arial;
+        font-variant: small-caps;
+        background: #183d3d;
+        color: #d9d9d9;
+      }
+      .line {
+        width: 60%;
+        height: 2px;
+        background: #183d3d;
+        margin: 5px auto 0px;
+      }
+      .gallery {
+        width: 32%;
+        height: 250px;
+        float: left;
+      }
+      .row .gallery:nth-child(2){
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      .box-1 {
+        width: 100%;
+        height: 150px;
+        border: 2px solid #183d3d;
+        margin-top: 5px;
+        background: url(image/5.jpg) no-repeat center center scroll;
+        background-size: cover;
+      }
+      .box-2 {
+        width: 100%;
+        height: 95px;
+        border-bottom: 2px solid #183d3d;
+        text-align: center;
+        line-height: 92px;
+        font-size: 9px;
+        font-family: arial;
+        font-variant: small-caps;
+        color: #183d3d;
+      }
+      .img-6 {
+        background: url(image/6.jpg) no-repeat center top scroll;
+        background-size: cover;
+      }
+      .img-9 {
+        background: url(image/9.jpg) no-repeat center top scroll;
+        background-size: cover;
+      }
+      .img-14 {
+        background: url(image/14.jpg) no-repeat center center scroll;
+        background-size: cover;
+      }
+      .img-4 {
+        background: url(image/4.jpg) no-repeat center center scroll;
+        background-size: cover;
+      }
+      .img-15 {
+        background: url(image/15.jpg) no-repeat center center scroll;
+        background-size: cover;
+      }
+      .p-2 {
+        background: url(image/19.jpg) no-repeat center center scroll;
+        background-size: cover;
+        color: whitesmoke;
+      }
+      .footer {
+        width: 100%;
+        height: 120px;
+        background: #040d12;
+        padding: 40px;
+        text-align: right;
+        font-size: 20px;
+        font-family: arial;
+        font-variant: small-caps;
+        color: #d9d9d9;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <!-- row 1 for header -->
+      <div class="row">
+        <div class="header">sara mirzaei</div>
+      </div>
+      <!-- row 2 for menu -->
+      <div class="row">
+        <div class="menu">
+          <div class="menu-child">home</div>
+          <div class="menu-child">gallery</div>
+          <div class="menu-child">aboat</div>
+          <div class="menu-child">contact</div>
+          <div class="menu-child">services</div>
+        </div>
+      </div>
+      <!-- row 3 for description -->
+      <div class="row">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta porro, eius dolorem voluptatum suscipit eum veniam laboriosam maiores voluptas! Dolorem repudiandae iste mollitia, molestias ipsa velit laudantium ea sequi quaerat ut assumenda, nisi ab corporis distinctio voluptate, sapiente saepe.</p>
+        <div class="line"></div>
+      </div>
+      <!-- row 4 for gallery -->
+      <div class="row">
+        <div class="gallery">
+          <div class="box-1"></div>
+          <div class="box-2">
+            <h2>title for image</h2>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="box-1 img-6"></div>
+          <div class="box-2">
+            <h2>title for image</h2>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="box-1 img-9"></div>
+          <div class="box-2">
+            <h2>title for image</h2>
+          </div>
+        </div>
+      </div>
+      <!-- row 5 for gallery -->
+      <div class="row">
+        <div class="gallery">
+          <div class="box-1 img-14"></div>
+          <div class="box-2">
+            <h2>title for image</h2>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="box-1 img-4"></div>
+          <div class="box-2">
+            <h2>title for image</h2>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="box-1 img-15"></div>
+          <div class="box-2">
+            <h2>title for image</h2>
+          </div>
+        </div>
+      </div>
+      <!-- row 6 for description -->
+      <div class="row">
+        <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aliquid provident doloremque dicta nulla fugiat harum nemo, autem placeat aspernatur optio hic laboriosam sapiente quis molestiae earum rem odit magni cum eaque. Maiores voluptas est consectetur incidunt ratione eos repudiandae.</p>
+      </div>
+      <!-- row 7 for footer -->
+      <div class="row footer">copyright &copy; 2023</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>train</title>
+  </head>
+  <body>
+    <script>
+      let d = new Date().getHours();
+      console.log(d);
+      if (d >= 6 && d <= 12) {
+        result = "Sobh bekheir";
+      } else if (d > 12 && d <= 17) {
+        result = "zohr bekheyr";
+      } else if (d > 17 && d <= 20) {
+        result = "asr bekheir";
+      } else if (d > 20 && d < 24) {
+        result = "shab bekheir";
+      } else {
+        result = "bamdad bekheir";
+      }
+      document.write(result);
+    </script>
+  </body>
+</html>

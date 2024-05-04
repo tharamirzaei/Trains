@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      ul {
+        width: 100%;
+        height: 50px;
+        background-color: skyblue;
+        display: flex;
+        border-bottom: 1px solid black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+      li {
+        width: 25%;
+        height: 100%;
+        border-left: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      li:first-child {
+        border: none;
+      }
+      .box {
+        width: 100%;
+        text-align: center;
+        height: 100vh;
+        padding-top: 50px;
+        position: relative;
+      }
+      #home {
+        background-color: pink;
+        margin-top: 50px;
+      }
+      #ser {
+        background-color: springgreen;
+      }
+      #about {
+        background-color: powderblue;
+      }
+      #contact {
+        background-color: slategrey;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Home</li>
+      <li>Services</li>
+      <li>About Us</li>
+      <li>Conatact Us</li>
+    </ul>
+    <div class="box" id="home">Home</div>
+    <div class="box" id="ser">Services</div>
+    <div class="box" id="about">About us</div>
+    <div class="box" id="contact">Contact Us</div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("li:nth-child(1)").click(function () {
+          let test = $("#home").offset().top - $("ul").outerHeight();
+
+          $("body , html").animate({ scrollTop: test }, 1000);
+        });
+        $("li:nth-child(2)").click(function () {
+          let test = $("#ser").offset().top - $("ul").outerHeight();
+
+          $("body , html").animate({ scrollTop: test }, 1000);
+        });
+        $("li:nth-child(3)").click(function () {
+          let test = $("#about").offset().top - $("ul").outerHeight();
+
+          $("body , html").animate({ scrollTop: test }, 1000);
+        });
+        $("li:nth-child(4)").click(function () {
+          let test = $("#contact").offset().top - $("ul").outerHeight();
+
+          $("body , html").animate({ scrollTop: test }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>train-input</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 10px;
+        }
+        #all{
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            display: block;
+        }
+        .box{
+            width: 300px;
+            border: 1px solid deeppink;
+            padding: 10px;
+            margin: 20px auto;
+        }
+        p{
+            font-size: 11px;
+            font-family:sans-serif;
+            margin: 5px 0;
+        }
+        .pall{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="all">
+    <button id="removeall">remove all</button>
+    <p class="pall">pleas select one item</p>
+    <div class="box">
+        <input type="checkbox">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis excepturi soluta nisi est commodi quas distinctio perspiciatis laboriosam, mollitia ab!</p>
+        <button id="remove">remove</button>
+    </div>
+    <div class="box">
+        <input type="checkbox">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis excepturi soluta nisi est commodi quas distinctio perspiciatis laboriosam, mollitia ab!</p>
+        <button id="remove">remove</button>
+    </div>
+    <div class="box">
+        <input type="checkbox">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis excepturi soluta nisi est commodi quas distinctio perspiciatis laboriosam, mollitia ab!</p>
+        <button id="remove">remove</button>
+    </div>
+    <div class="box">
+        <input type="checkbox">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis excepturi soluta nisi est commodi quas distinctio perspiciatis laboriosam, mollitia ab!</p>
+        <button id="remove">remove</button>
+    </div>
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#all").click(function(){
+                if($(this).is(":checked")){
+                    $(this).siblings().children("input").prop("checked" , true)
+                }else{
+                    $(this).siblings().children("input").prop("checked" , false)
+                }
+            })
+            $(".box > #remove").click(function(){
+                if($("input").is(":checked")){
+                    $(this).parent().slideUp()
+                }
+            })
+            $("#removeall").click(function(){
+                if($("input").is(":checked")){
+                    $(this).parent().children(".box").fadeOut()
+                }
+            })
+        })
+    </script>
+</body>
+</html>

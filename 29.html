@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            position: absolute;
+            top: 100px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: deeppink;
+            border-radius: 50%;
+        }
+        .add-anime{
+            animation: anime 2s linear;
+        }
+
+        @keyframes anime {
+            0%{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(1.5);
+                opacity: 0.75;
+            }
+            50%{
+                transform: scale(2);
+                opacity: 0.5;
+            }
+            75%{
+                transform: scale(1.5);
+                opacity: 0.75;
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+   <button>click me</button>
+   <div></div> 
+
+
+   <script>
+    document.querySelector("button").addEventListener("click" , function(){
+        document.querySelector("div").classList.add("add-anime")
+    })
+
+    /* setTimeout(function(){
+        document.querySelector("div").classList.remove("add-anime")
+    } , 4000) ===> das ist falsh */
+
+    setInterval(function(){
+        document.querySelector("div").classList.remove("add-anime")
+    } , 4000)
+   </script>
+</body>
+</html>

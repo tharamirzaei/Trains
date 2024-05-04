@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhr</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .circle{
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            border-radius: 50%;
+        }
+        .line{
+            width: 3px;
+            height: 97px;
+            background-color: wheat;
+            position: absolute;
+            bottom:50% ;
+            transform-origin: bottom center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+
+
+    <script>
+        function test1 (){
+            let d = new Date()
+            let sec = d.getSeconds()*6
+            
+            document.querySelector(".line-3").style.transform = "rotate("+sec+"deg)"
+
+            let min = d.getMinutes()*6
+            
+            document.querySelector(".line-2").style.transform = "rotate("+min+"deg)"
+
+
+            let uhr = d.getHours() * 30
+            
+            document.querySelector(".line-1").style.transform = "rotate("+uhr+"deg)"
+
+        }
+
+        setInterval(test1 , 1000)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>train-2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+      }
+      input {
+        width: 200px;
+        padding: 3px;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      ul {
+        background-color: #333;
+        width: 200px;
+        border-radius: 5px;
+        display: none;
+      }
+      ul > li {
+        font-family: sans-serif;
+        font-size: 11px;
+        padding: 4px;
+        border-bottom: 1px solid white;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter your Name" />
+    <ul>
+      <li>ali miladi</li>
+      <li>sara mirzaei</li>
+      <li>bahare abbasi</li>
+      <li>dina naderi</li>
+      <li>mohsen omidi</li>
+      <li>nafas akbari</li>
+      <li>mina jahed</li>
+      <li>ali rezaei</li>
+      <li>dina baqeri</li>
+      <li>nasim omidi</li>
+      <li>mostafa abbasi</li>
+    </ul>
+
+    <script>
+      let list = document.querySelector("ul").children;
+      document.querySelector("ul").style.display = "block";
+     
+      document
+        .querySelector("input")
+        .addEventListener("keyup", function (event) {
+          
+          let val = document.querySelector("input").value;
+
+
+          for (i = 0; i < list.length; i++) {
+            if (list[i].innerHTML.includes(val)) {
+              list[i].style.display = "block";
+            } else {
+              list[i].style.display = "none";
+            }
+          }
+        });
+
+        for(i=0 ; i<list.length ; i++){
+          list[i].addEventListener("click" , function(){
+            document.querySelector("input").value = this.innerHTML
+
+            document.querySelector("ul").style.display = "none"
+
+            console.log(this.innerHTML);
+          })
+        }
+    </script>
+  </body>
+</html>

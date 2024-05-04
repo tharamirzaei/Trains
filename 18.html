@@ -1,0 +1,103 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework-3-corect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #132043;
+        }
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            overflow: hidden;
+            transition: 1s;
+        }
+        input{
+            display: none;
+        }
+        .parent > label{
+            width: 50%;
+            height: 50%;
+            border: 1px solid #132043;
+            display: block;
+            float: left;
+            position: relative;
+            
+        }
+        .parent > label[for *="1"]{
+            background-color: #c0dbea;
+        }
+        .parent > label[for *="2"]{
+            background-color: #ba90c6;;
+        }
+        .parent > label[for *="3"]{
+            background-color: #e8a0bf;
+        }
+        .parent > label[for *="4"]{
+            background-color: #fdf4f5;
+        }
+        .parent > label::after{
+            content: attr(for);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            line-height: 150px;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #132043;
+        }
+        .parent > label[for *="1"]::after{
+            transform: rotate(-45deg);
+        }
+        .parent > label[for *="2"]::after{
+            transform: rotate(45deg);
+        }
+        .parent > label[for *="3"]::after{
+            transform: rotate(-135deg);
+        }
+        .parent > label[for *="4"]::after{
+            transform: rotate(135deg);
+        }
+        #text-1:checked ~ .parent{
+            transform: translate(-50% , -50%) rotate(45deg);
+        }
+        #text-2:checked ~ .parent{
+            transform: translate(-50% , -50%) rotate(-45deg);
+        }
+        #text-3:checked ~ .parent{
+            transform: translate(-50% , -50%) rotate(135deg);
+        }
+        #text-4:checked ~ .parent{
+            transform: translate(-50% , -50%) rotate(-135deg);
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="demo" id="text-1">
+    <input type="radio" name="demo" id="text-2">
+    <input type="radio" name="demo" id="text-3">
+    <input type="radio" name="demo" id="text-4">
+    <div class="parent">
+        <label for="text-1"></label>
+        <label for="text-2"></label>
+        <label for="text-3"></label>
+        <label for="text-4"></label>
+    </div>
+</body>
+</html>

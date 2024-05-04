@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <script>
+      let d = new Date().getDay();
+      console.log(d);
+      let result;
+      switch (d) {
+        case 6:
+          result = "shanbe";
+          break;
+        case 5:
+          result = "jome";
+          break;
+        case 4:
+          result = "5shanbe";
+          break;
+        case 3:
+          result = "4shanbe";
+          break;
+        case 2:
+          result = "3shanbe";
+          break;
+        case 1:
+          result = "2shanbe";
+          break;
+        case 0:
+          result = "1shanbe";
+          break;
+        default:
+          result = "eshtebah";
+          break;
+      }
+      document.write("Emrooz" + " " + result + " " + "Ast");
+    </script>
+  </body>
+</html>

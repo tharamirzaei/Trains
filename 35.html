@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>train filter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            width: 24%;
+        }
+        figure{
+            width: 100%;
+            padding: 0;
+        }
+        img{
+            margin-left: 1%;
+            margin-top: 1%;
+            width: 32.3333%;
+            float: left;
+        }
+        .bandw{
+            filter: grayscale(1);
+        }
+    </style>
+</head>
+<body>
+    <button id="all">ALL</button>
+    <button id="women">WOMEN</button>
+    <button id="men">MEN</button>
+    <button id="sport">SPORT</button>
+    <figure>
+        <img src="image/sport (1).jpg">
+        <img src="image/sport (2).jpg">
+        <img src="image/man(3).jpg">
+        <img src="image/women(4).jpg">
+        <img src="image/man(5).jpg">
+        <img src="image/man(6).jpg">
+        <img src="image/women(7).jpg">
+        <img src="image/women(8).jpg">
+        <img src="image/sport (9).jpg">
+    </figure>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("img").hover(function(){
+                $(this).siblings().toggleClass("bandw")
+            })
+
+            $("#all").click(function(){
+                $("img").css("display" , "block")
+            })
+
+            $("#women").click(function(){
+                $("img").filter(function(){
+                    if($(this).prop("src").includes("women")){
+                        $(this).css("display" , "block")
+                    }else{
+                        $(this).css("display" , "none")
+                    }
+                })
+            })
+
+            $("#sport").click(function(){
+                $("img").filter(function(){
+                    if($(this).prop("src").includes("sport")){
+                        $(this).css("display" , "block")
+                    }else{
+                        $(this).css("display" , "none")
+                    }
+                })
+            })
+
+            $("#men").click(function(){
+                $("img").filter(function(){
+                    if($(this).prop("src").includes("man")){
+                        $(this).css("display" , "block")
+                    }else{
+                        $(this).css("display" , "none")
+                    }
+                })
+            })
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>list</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      .menu {
+        width: 200px;
+        background-color: pink;
+        margin: 20px auto;
+      }
+      .menu > li {
+        background-color: dodgerblue;
+        border-bottom: 1px solid white;
+        font-family: sans-serif;
+      }
+      .menu > li > h3 {
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        font-weight: lighter;
+      }
+      .menu > li > ul {
+        display: none;
+      }
+      .menu > li > ul > li {
+        font-size: 12px;
+        padding: 5px;
+        background-color: pink;
+        border-bottom: 1px solid deeppink;
+      }
+      span {
+        background-color: rgba(255, 255, 255, 0.37);
+        border-radius: 10px;
+        font-size: 11px;
+        padding: 3px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>
+        <h3>
+          Apple
+          <span>test</span>
+        </h3>
+        <ul>
+          <li>iPhone 12</li>
+          <li>iPhone 13</li>
+          <li>iPhone 14</li>
+        </ul>
+      </li>
+      <li>
+        <h3>
+          Sumsung
+          <span>test</span>
+        </h3>
+        <ul>
+          <li>s 12</li>
+          <li>s 13</li>
+          <li>s 14</li>
+        </ul>
+      </li>
+      <li>
+        <h3>
+          Xiaomi
+          <span>test</span>
+        </h3>
+        <ul>
+          <li>Mi 12</li>
+          <li>Mi 13</li>
+          <li>Mi 14</li>
+        </ul>
+      </li>
+      <li>
+        <h3>
+          Nokia
+          <span>test</span>
+        </h3>
+        <ul>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+        </ul>
+      </li>
+    </ul>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("h3").click(function () {
+          $(this).siblings().slideToggle();
+          $(this).parent().siblings().children("ul").slideUp();
+        });
+
+        $(".menu > li > ul > li").click(function () {
+          $(this)
+            .parent()
+            .siblings()
+            .children("span")
+            .css("display", "inline-block");
+          $(this).parent().siblings().children("span").html($(this).html());
+        });
+      });
+    </script>
+  </body>
+</html>

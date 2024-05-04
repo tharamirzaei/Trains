@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>train 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h2{
+            text-align: center;
+            margin-top: 100px;
+            font-family: sans-serif;
+        }
+        input{
+            margin: 100px auto;
+            display: block;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 >Please enter a color</h2>
+   <input type="text"> 
+   <script>
+    document.querySelector("input").addEventListener("keyup" , function(){
+        document.querySelector("body").style.backgroundColor= document.querySelector("input").value
+    })
+   </script>
+</body>
+</html>

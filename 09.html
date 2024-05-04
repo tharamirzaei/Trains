@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      div {
+        width: 23.75%;
+        height: 250px;
+        background-color: hotpink;
+        float: left;
+        margin-left: 1%;
+        margin-top: 1%;
+        position: relative;
+        overflow: hidden;
+        
+      }
+      div::before {
+        content: attr(brand);
+        width: 100%;
+        height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+      div::after {
+        content: attr(price);
+        width: 100%;
+        height: 50px;
+        background-color: skyblue;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: bold;
+        transition: 0.5s;
+      }
+      div:hover::before{
+        top: 0;
+      }
+      div:hover::after{
+        bottom: 0;
+      }
+  
+    </style>
+  </head>
+  <body>
+    <div brand="iphone 6" price="200$"></div>
+    <div brand="iphone 7" price="210$"></div>
+    <div brand="iphone 8" price="230$"></div>
+    <div brand="iphone 9" price="250$"></div>
+    <div brand="iphone 10" price="270$"></div>
+    <div brand="iphone 11" price="280$"></div>
+    <div brand="iphone 12" price="290$"></div>
+    <div brand="iphone 13" price="300$"></div>
+  </body>
+</html>

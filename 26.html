@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>train-1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-wrap: wrap;
+      }
+      h2{
+        position: absolute;
+        top: 10%;
+        color: grey+++=;
+      }
+      .box {
+        width: 30px;
+        height: 30px;
+        background-color: deeppink;
+        position: relative;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>لطفا یکی از دکمه های بالا ، پایین ، چپ یا راست کیبرد را بفشارید </h2>
+    <div class="box"></div>
+
+    <script>
+      let x = 0;
+      let y = 0
+      let s = 0
+      let box = document.querySelector(".box")
+      document
+        .querySelector("body")
+        .addEventListener("keydown", function (event) {
+          console.log(event);
+          if (event.which == 37) {
+            x -= 10;
+            box.style.left = x + "px"
+          }else if(event.which == 38) {
+            y -=10
+            box.style.top = y + "px"
+          }else if(event.which == 39){
+            x +=10
+            box.style.left= x + "px"
+          }else if(event.which == 40){
+            y +=10
+            box.style.top= y + "px"
+          }
+          if(event.which == 187){
+            s += 1
+            box.style.transform = "scale("+s+")"
+          }
+          if(event.which == 189){
+            s -=1
+            box.style.transform = "scale("+s+")"
+          }
+        });
+    </script>
+  </body>
+</html>

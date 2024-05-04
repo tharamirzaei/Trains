@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>train-02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 220px;
+            height: 300px;
+            background-image: linear-gradient(to bottom , greenyellow 0% , greenyellow 32% , white 32% , white 36% , greenyellow 36%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            border-radius: 45% 45% 25px 25px;
+        }
+        div::after{
+            content: "";
+            width: 35px;
+            height: 130px;
+            background-color: black;
+            position: absolute;
+            top: 130px;
+            left: -40px;
+            border-radius: 25px;
+            background-color: greenyellow;
+            box-shadow: 265px 0 0 0 greenyellow , 80px 110px 0 0 greenyellow , 180px 110px 0 0 greenyellow;
+        }
+        span{
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            display: block;
+            position: absolute;
+            top: 35px;
+            left: 57px;
+            border-radius: 50%;
+            box-shadow: 95px 0 0 0 white;
+        }
+        span::after{
+            content: "";
+            width: 10px;
+            height: 60px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            top: -70px;
+            left:0px;
+            border-radius: 25px;
+            background-color: greenyellow;
+            transform: rotate(-25deg);
+        }
+        span::before{
+            content: "";
+            width: 10px;
+            height: 60px;
+            background-color: greenyellow;
+            display: block;
+            position: absolute;
+            top: -70px;
+            left: 90px;
+            transform: rotate(25deg);
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span></span>
+    </div>
+</body>
+</html>
